@@ -23,6 +23,10 @@ kotlin {
 
         compilations.create("bench")
     }
+    wasmJs {
+        browser {
+        }
+    }
     // For ARM, should be changed to iosArm32 or iosArm64
     // For Linux, should be changed to e.g. linuxX64
     // For MacOS, should be changed to e.g. macosX64
@@ -60,6 +64,7 @@ kotlin {
         }
 
         val jsMain by getting {}
+        val wasmJsMain by getting {}
 
         val jvmMain by getting {}
 
